@@ -11,7 +11,7 @@ const Page = () => {
     BNB: 7.12,
     ETH: 3.1,
     USDT: 4785,
-    ALT: 3170,
+    ALT: 3225,
     BLUR: 1481,
     SATS: 156352199,
     SUI: 5440,
