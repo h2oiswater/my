@@ -10,21 +10,16 @@ const Page = () => {
   const [usdtRMBPrice, setUsdtRMBPrice] = useState(7.42);
 
   const balance: { [key: string]: number } = {
-    BTC: 0.24,
-    BNB: 7.12,
-    ETH: 3.1,
-    USDT: 4785,
-    ALT: 3225,
-    BLUR: 1481,
-    SATS: 156352199,
-    SUI: 5440,
+    BTC: 0.25261,
+    ETH: 4.07,
+    USDT: 9959,
   };
 
   const perWidth = "250px";
 
   // 计算总价值
   const totalValue = prices?.reduce((acc, value) => {
-    const assetBalance = balance[value.name];
+    const assetBalance = balance[value.name] || 0;
     const assetPrice =
       value.adjustedPrice.parseToEqual(assetBalance) *
       value.adjustedPrice.price;
@@ -36,13 +31,7 @@ const Page = () => {
     return acc + parseFloat(assetTotalValue);
   }, 0);
 
-  // 贷款 80000
-  // 公积金 73400
-  // 工资 23000
-  const loan = 80000;
-  const jpInvest = 23000;
-  const slInvest = 73400;
-  const principle = slInvest + jpInvest + loan;
+  const principle = 300000;
 
   return (
     <div>
@@ -74,7 +63,7 @@ const Page = () => {
               </div>
               <div style={{ width: perWidth }}>
                 {Decimal.formatPrice(
-                  value.adjustedPrice.parseToEqual(balance[value.name]) *
+                  value.adjustedPrice.parseToEqual(balance?.[value.name] || 0) *
                     value.adjustedPrice.price,
                   value.adjustedPrice.expo * 2,
                   4
@@ -102,14 +91,6 @@ const Page = () => {
           <div style={{ width: perWidth }}></div>
           <div style={{ width: perWidth }}></div>
           <div style={{}}>{principle}元</div>
-        </div>
-        <div style={{ display: "flex" }}>
-          <div style={{ width: perWidth }}>本金(无贷款) + 浮盈：RMB</div>
-          <div style={{ width: perWidth }}></div>
-          <div style={{ width: perWidth }}></div>
-          <div style={{}}>
-            {((totalValue || 0) * usdtRMBPrice - loan).toFixed(4)}元
-          </div>
         </div>
         <div style={{ display: "flex" }}>
           <div style={{ width: perWidth }}>浮盈：RMB</div>
