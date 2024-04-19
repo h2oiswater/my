@@ -13,11 +13,11 @@ const Page = () => {
     BTC: 0.24,
     BNB: 7.12,
     ETH: 3.1,
-    USDT: 4785,
+    USDT: 5000 + 2120,
     ALT: 3225,
     BLUR: 1481,
     SATS: 156352199,
-    SUI: 5440,
+    SUI: 752 + 4729,
   };
 
   const perWidth = "250px";
