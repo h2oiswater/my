@@ -7,17 +7,18 @@ import { useState } from "react";
 const Page = () => {
   const { prices } = useLatestPrices();
 
-  const [usdtRMBPrice, setUsdtRMBPrice] = useState(7.42);
+  const [usdtRMBPrice, setUsdtRMBPrice] = useState(7.2);
 
   const balance: { [key: string]: number } = {
-    BTC: 0.24,
-    BNB: 7.12,
+    BTC: 0.3288237,
+    BNB: 7.24,
     ETH: 3.1,
-    USDT: 5000 + 2120,
-    ALT: 3225,
+    USDT: 93 + 1715 + 1600 + 200, // 93 是OKX的交易账户余额 1715是抵押物 1600 + 200 是币安
+    ALT: 0,
     BLUR: 1481,
     SATS: 156352199,
-    SUI: 752 + 4729,
+    SUI: 5826,
+    MERL: 1161,
   };
 
   const perWidth = "250px";
@@ -38,9 +39,9 @@ const Page = () => {
 
   // 贷款 80000
   // 公积金 73400
-  // 工资 23000
+
   const loan = 80000;
-  const jpInvest = 23000;
+  const jpInvest = 23000 + 12000; // 工资 23000
   const slInvest = 73400;
   const principle = slInvest + jpInvest + loan;
 

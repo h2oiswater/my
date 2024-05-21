@@ -7,7 +7,7 @@ import { useState } from "react";
 const Page = () => {
   const { prices } = useLatestPrices();
 
-  const [usdtRMBPrice, setUsdtRMBPrice] = useState(7.42);
+  const [usdtRMBPrice, setUsdtRMBPrice] = useState(7.2);
 
   const balance: { [key: string]: number } = {
     BTC: 0.25261,
