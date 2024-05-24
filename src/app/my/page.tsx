@@ -41,7 +41,7 @@ const Page = () => {
   // 公积金 73400
 
   const loan = 80000;
-  const jpInvest = 23000 + 12000; // 工资 23000
+  const jpInvest = 23000 + 12000 + 28800; // 工资 23000 + 外包28800
   const slInvest = 73400;
   const principle = slInvest + jpInvest + loan;
 
