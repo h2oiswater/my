@@ -17,7 +17,7 @@ const Page = () => {
     ALT: 0,
     BLUR: 1481,
     SATS: 156352199,
-    SUI: 5826,
+    SUI: 5767,
     MERL: 1161,
   };
 
