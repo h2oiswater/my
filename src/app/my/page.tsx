@@ -12,7 +12,7 @@ const Page = () => {
   const balance: { [key: string]: number } = {
     BTC: 0.3288237,
     BNB: 7.24,
-    ETH: 3.53, // 3.1在restaking 3730的时候用1600买了0.43个
+    ETH: 3.674, // 3.1在restaking 3730的时候用1600买了0.43个
     USDT: 93 + 1715 + 200 + 4000, // 93 是OKX的交易账户余额 1715是抵押物 1600 + 200 是币安
     ALT: 0,
     BLUR: 1481,
